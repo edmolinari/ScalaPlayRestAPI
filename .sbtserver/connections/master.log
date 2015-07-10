@@ -1,0 +1,7 @@
+New log file opened at Thu Jul 09 18:53:39 PDT 2015 by 8884@MacBook-Pro-de-Eduardo.local
+Taking next connection to: 54353
+New client attempting to connect on port: 54354-54353
+  Address = /192.168.0.155:54353
+This client on port 54354 has uuid 734df73e-3e4c-4bab-b3a8-1d5ed4a8aeab configName activator humanReadableName Activator protocolVersion 3 featureTags Vector()
+Connected Clients: activator-734df73e-3e4c-4bab-b3a8-1d5ed4a8aeab
+Taking next connection to: 54353

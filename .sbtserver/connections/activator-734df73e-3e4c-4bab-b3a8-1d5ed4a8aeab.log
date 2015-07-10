@@ -1,0 +1,14 @@
+New log file opened at Thu Jul 09 18:54:39 PDT 2015 by 8884@MacBook-Pro-de-Eduardo.local
+Sending msg to client activator-734df73e-3e4c-4bab-b3a8-1d5ed4a8aeab: DetachedLogEvent(LogMessage(debug,sbt server socket logs are in: /Users/eduardomolinari/scala_apps/test/json-hello/.sbtserver/connections/master.log))
+Sending msg to client activator-734df73e-3e4c-4bab-b3a8-1d5ed4a8aeab: DetachedLogEvent(LogMessage(debug,sbt client logs are in: /Users/eduardomolinari/scala_apps/test/json-hello/.sbtserver/connections/activator-734df73e-3e4c-4bab-b3a8-1d5ed4a8aeab.log))
+Reading next message from client.
+Sending msg to client activator-734df73e-3e4c-4bab-b3a8-1d5ed4a8aeab: DetachedLogEvent(LogMessage(debug,sbt general server logs are in: /Users/eduardomolinari/scala_apps/test/json-hello/.sbtserver/master.log))
+Got request: ListenToEvents()
+Reading next message from client.
+Sending msg to client activator-734df73e-3e4c-4bab-b3a8-1d5ed4a8aeab: DetachedLogEvent(LogMessage(debug,> --initialize))
+Sending msg to client activator-734df73e-3e4c-4bab-b3a8-1d5ed4a8aeab: DetachedLogEvent(LogMessage(debug,> initialize))
+Sending msg to client activator-734df73e-3e4c-4bab-b3a8-1d5ed4a8aeab: DetachedLogEvent(LogMessage(debug,> onFailure load-failed))
+Sending msg to client activator-734df73e-3e4c-4bab-b3a8-1d5ed4a8aeab: DetachedLogEvent(LogMessage(debug,> boot))
+Sending msg to client activator-734df73e-3e4c-4bab-b3a8-1d5ed4a8aeab: DetachedLogEvent(LogMessage(debug,> reload))
+Sending msg to client activator-734df73e-3e4c-4bab-b3a8-1d5ed4a8aeab: DetachedLogEvent(LogMessage(debug,[Loading] Scanning directory /Users/eduardomolinari/scala_apps/test/json-hello/project))
+Sending msg to client activator-734df73e-3e4c-4bab-b3a8-1d5ed4a8aeab: (3,ReceivedResponse())
