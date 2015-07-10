@@ -33,11 +33,11 @@ class ApplicationSpec extends Specification {
         "name" -> JsString("Eduardo")
       )
       val helloEndpoint = FakeRequest(
-                            method = "POST",
-                            uri = "/hello",
-                            headers = FakeHeaders(Seq("Content-type" -> "application/json")),
-                            body =  json
-                        )
+        method = "POST",
+        uri = "/hello",
+        headers = FakeHeaders(Seq("Content-type" -> "application/json")),
+        body =  json
+      )
 
       val result = route(helloEndpoint).get
       status(result) must equalTo(OK)
