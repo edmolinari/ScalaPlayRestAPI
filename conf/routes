@@ -7,6 +7,7 @@ GET     /                           controllers.Application.index
 
 POST    /hello                      controllers.Application.hello
 POST    /hello-async                controllers.Application.helloAsync
+POST    /hello-v2                   controllers.Application.helloV2
 
 # Map static resources from the /public folder to the /assets URL path
 GET     /assets/*file               controllers.Assets.versioned(path="/public", file: Asset)
