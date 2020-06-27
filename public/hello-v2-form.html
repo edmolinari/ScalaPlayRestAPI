@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hello V2 Form</title>
+    <script src="javascripts/jquery-2.1.4.min.js"></script>
+</head>
+<body>
+<h1>Hello V2 Form</h1>
+<form id="helloForm">
+    Enter greeting: <input id="greeting" name="greeting" type="text"><br/>
+    Enter your name: <input id="name" name="name" type="text"><br/>
+    Enter your age: <input id="age" name="age" type="text">
+    <input type="submit">
+</form>
+<script>
+      $("#helloForm").submit(function(e){
+
+        e.preventDefault();
+
+        var data = {}
+        var Form = this;
+
+        data["greeting"] = $("#greeting").val();
+        data["name"] = $("#name").val();
+        data["age"] = parseInt($("#age").val());
+
+        console.log(data);
+        console.log(JSON.stringify(data));
+
+        $.ajax({
+          url : "/hello-v2",
+          type: "POST",
+          contentType: 'application/json',
+          dataType : "json",
+          data : JSON.stringify(data),
+          context : Form,
+          success : function(callback){
+            console.log(callback);
+          },
+          error : function(){
+
+          }
+        });
+      });
+
+    </script>
+</body>
+</html>

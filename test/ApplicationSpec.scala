@@ -65,5 +65,49 @@ class ApplicationSpec extends Specification {
       val responseNode = Json.parse(contentAsString(result))
       (responseNode \ "message").as[String] must equalTo("Hello Eduardo ASync")
     }
+
+
+    "return a json from hello-v2 endpoint" in new WithApplication {
+      val json = Json.obj(
+        "greeting" -> JsString("Hi"),
+        "name" -> JsString("Eduardo"),
+        "age" -> JsNumber(25)
+      )
+      val helloV2Endpoint = FakeRequest(
+        method = "POST",
+        uri = "/hello-v2",
+        headers = FakeHeaders(Seq("Content-type" -> "application/json")),
+        body =  json
+      )
+
+      val result = route(helloV2Endpoint).get
+      status(result) must equalTo(OK)
+      contentType(result) must beSome("application/json")
+      val responseNode = Json.parse(contentAsString(result))
+      println(responseNode)
+      (responseNode \ "content" \ "greetingMessage").as[String] must equalTo("Hi Eduardo")
+      (responseNode \ "content" \ "age").as[Int] must equalTo(25)
+    }
   }
+
+  "return a error json from hello-v2 endpoint when json structure is wrong" in new WithApplication {
+    val json = Json.obj(
+      "text" -> JsString("Hi"),
+      "name" -> JsString("Eduardo")
+    )
+    val helloV2Endpoint = FakeRequest(
+      method = "POST",
+      uri = "/hello-v2",
+      headers = FakeHeaders(Seq("Content-type" -> "application/json")),
+      body =  json
+    )
+
+    val result = route(helloV2Endpoint).get
+    status(result) must equalTo(400)
+    contentType(result) must beSome("application/json")
+    val responseNode = Json.parse(contentAsString(result))
+    println(responseNode)
+    (responseNode \ "status").as[String] must equalTo("KO")
+  }
+
 }
